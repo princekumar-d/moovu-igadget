@@ -1,27 +1,27 @@
 <config>
-<account>tuitrial</account>
+<account>tuiuktrialprod</account>
 <debugTracking>true</debugTracking>
-<visitorNamespace>tuiltd</visitorNamespace>
+<visitorNamespace>bcgs-test</visitorNamespace>
 <trackingServer>tuiuk.d1.sc.omtrdc.net</trackingServer>
 <media>
 <autoTrack>true</autoTrack>
 <trackMilestones>25,50,75,100</trackMilestones>
-<trackVars>events,eVar15,eVar16,eVar17,prop3</trackVars>
-<trackEvents>event5,event6,event7,event8,event9,event10,event11</trackEvents>
+<trackVars>events,eVar90,eVar91,eVar92,prop90</trackVars>
+<trackEvents>event90,event91,event92,event93,event94,event95,event96</trackEvents>
 <segmentByMilestones>true</segmentByMilestones>
 <trackUsingContextData>true</trackUsingContextData>
 <contextDataMapping>
-<a.media.name>eVar15,prop3</a.media.name>
-<a.media.segment>eVar16</a.media.segment>
-<a.contentType>eVar17</a.contentType>
-<a.media.timePlayed>event5</a.media.timePlayed>
-<a.media.view>event6</a.media.view>
-<a.media.segmentView>event8</a.media.segmentView>
+<a.media.name>eVar90,prop90</a.media.name>
+<a.media.segment>eVar91</a.media.segment>
+<a.contentType>eVar92</a.contentType>
+<a.media.timePlayed>event90</a.media.timePlayed>
+<a.media.view>event91</a.media.view>
+<a.media.segmentView>event92</a.media.segmentView>
 <a.media.milestones>
-<item name="25">event9</item>
-<item name="50">event10</item>
-<item name="75">event11</item>
-<item name="100">event7</item>
+<item name="25">event93</item>
+<item name="50">event94</item>
+<item name="75">event95</item>
+<item name="100">event96</item>
 </a.media.milestones>
 </contextDataMapping>
 </media>
