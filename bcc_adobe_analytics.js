@@ -285,7 +285,7 @@ function s_pgicq(){var a=window,k=a.s_giq,q,r,n;if(k)for(q=0;q<k.length;q++)r=k[
 		
 		if(!this._provider.isAdPlaying()){
 			videoInfo.id = this._player.mediainfo.id;
-			videoInfo.name = "some video name";
+			videoInfo.name = "SOme video name";
 			//videoInfo.name = this._player.mediainfo.name;
 			videoInfo.playerName = this._provider._settings.PLAYER.NAME;
 			if (this._player.duration() > 0) {
