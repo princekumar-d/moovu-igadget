@@ -882,7 +882,7 @@ function s_pgicq(){var a=window,k=a.s_giq,q,r,n;if(k)for(q=0;q<k.length;q++)r=k[
 		var my_eVar = this._dataMapping.bc_data_mapping.name.split(",");
 		this._appMeasurement.linkTrackVars = "events," + this._dataMapping.bc_data_mapping.contentType + "," + my_eVar[0] + "," + this._dataMapping.bc_data_mapping.segment + ",contextData.a.media.name,contextData.a.media.playerName,contextData.a.media.channel,contextData.a.contentType";
 		this._appMeasurement[my_eVar[0]]  = this._player.mediainfo.name;
-		this._appMeasurement[this._dataMapping.bc_data_mapping.contentType]  = 'video';
+		this._appMeasurement[this._dataMapping.bc_data_mapping.contentType]  = this._player.id;
 		switch(milestone) {
 		case 0:
 			o_debug('Player event: TrackMilestone 0');
