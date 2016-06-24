@@ -156,3 +156,7 @@
         // register simpleAnalytics plugin with the player
         videojs.plugin("simpleAnalytics", simpleAnalytics);
     })(window, document, videojs);
+	
+	for(var v in videojs.getPlayers()){
+		videojs.getPlayers()[v].simpleAnalytics();
+	}
