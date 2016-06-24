@@ -441,7 +441,11 @@ function s_pgicq(){var a=window,k=a.s_giq,q,r,n;if(k)for(q=0;q<k.length;q++)r=k[
 
         };
 
-
+var appMeasurement = new AppMeasurement();
+		appMeasurement.visitor = visitor;
+		appMeasurement.visitorNamespace = settings.VISITOR_API.NAMESPACE;
+		appMeasurement.trackingServer = settings.APP_MEASUREMENT.TRACKING_SERVER;
+		appMeasurement.account = settings.APP_MEASUREMENT.RSID;
 
         // register simpleAnalytics plugin with the player
         videojs.plugin("simpleAnalytics", simpleAnalytics);
