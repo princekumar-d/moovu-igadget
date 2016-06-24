@@ -279,16 +279,6 @@ trackingServer: "edinburghcc.sc.omtrdc.net", // same as s.trackingServer
 
 
 
-
-
-
-
-
-
-
-
-$( document ).ready(function() {
-
     (function(window, document, vjs, undefined) {
         simpleAnalytics = function (options) {
             var myPlayer = this;
@@ -438,5 +428,3 @@ $( document ).ready(function() {
         // register simpleAnalytics plugin with the player
         videojs.plugin("simpleAnalytics", simpleAnalytics);
     })(window, document, videojs);
-
-})
