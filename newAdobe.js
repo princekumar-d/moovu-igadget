@@ -1,5 +1,5 @@
 
-videojs.plugin('siteCatalyst', function() {
+videojs.plugin('milestone', function() {
           var myPlayer = this;
             var isContentLoaded=false;
             var videoDuration;
@@ -95,23 +95,6 @@ videojs.plugin('siteCatalyst', function() {
                     s.Media.stop(mediaName,currentTime);
                 }
             });
-
-            //myPlayer.on('timeupdate',function(){
-                //console.log("timeupdate - " + myPlayer.mediainfo.description);
-            //});
-
-            //myPlayer.on('volumechange',function(){
-                //console.log("volumechange - " + myPlayer.mediainfo.description);
-            //});
-
-            //myPlayer.on('waiting',function(){
-                //console.log("waiting - " + myPlayer.mediainfo.description);
-            //});
-
-           // myPlayer.on('durationchange',function(){
-                //console.log("durationchange - " + myPlayer.mediainfo.description);
-            //});
-
             myPlayer.on('ended',function(){
                 //console.log("ended - " + myPlayer.mediainfo.description);
                 //Check if metadata loaded - needed to make sure correct video media module instance is tracked.
@@ -123,20 +106,4 @@ videojs.plugin('siteCatalyst', function() {
                     resetVariables();
                 }
             });
-          
-            //myPlayer.on('fullscreenchange',function(){
-                //console.log("fullscreenchange - " + myPlayer.mediainfo.description);
-            //});
-
-            //myPlayer.on('loadedalldata',function(){
-                //console.log("loadedalldata - " + myPlayer.mediainfo.description);
-            //});
-
-            //myPlayer.on('loadeddata',function(){
-                //console.log("loadeddata - " + myPlayer.mediainfo.description);
-            //});
-          
-            //myPlayer.on('loadedmetadata',function(){
-                //console.log("loadedmetadata - " + myPlayer.mediainfo.description);
-            //});
 });
