@@ -1,24 +1,12 @@
-
-
-
-
-
-
-
-
-    (function(window, document, vjs, undefined) {
-		
-		
-		
-        simpleAnalytics = function (options) {
-            var myPlayer = this;
+videojs.plugin('pluginDev', function() {
+          var myPlayer = this;
             var isContentLoaded=false;
             var videoDuration;
             var mediaName;
             var mediaPlayerName = "Brightcove New Player - Milestone";
             var currentTime;
             var isPlaying = false;
-
+          
             function ABDMediaOPEN() {
                 console.log("IN ABDMediaOPEN TOP");
                 //Check the metadata is loaded
@@ -28,7 +16,7 @@
                     currentTime = myPlayer.currentTime();
                     mediaName = myPlayer.mediainfo.description;
                     videoDuration = myPlayer.mediainfo.duration;
-                    //Open adobe Analytics Media Module 
+                    //Open adobe Analytics Media Module
                     s.Media.open(mediaName,videoDuration,mediaPlayerName);
                     //Check if video is playing
                     if(isPlaying){
@@ -39,14 +27,14 @@
                     }
                 }
             }
-
+          
             //Used to reset the variables as when the next videos play, the play event is called before loadstart ...
             function resetVariables(){
                 isContentLoaded = false;
                 videoDuration = currentTime = "";
-
+              
             }
-
+          
             myPlayer.on('loadstart',function(){
                 console.log("loadstart - " + myPlayer.mediainfo.description);
                 //Check that metadata is loaded
@@ -134,7 +122,7 @@
                     resetVariables();
                 }
             });
-
+          
             myPlayer.on('fullscreenchange',function(){
                 console.log("fullscreenchange - " + myPlayer.mediainfo.description);
             });
@@ -146,17 +134,8 @@
             myPlayer.on('loadeddata',function(){
                 console.log("loadeddata - " + myPlayer.mediainfo.description);
             });
-
+          
             myPlayer.on('loadedmetadata',function(){
                 console.log("loadedmetadata - " + myPlayer.mediainfo.description);
             });
-
-        };
-
-        // register simpleAnalytics plugin with the player
-        videojs.plugin("simpleAnalytics", simpleAnalytics);
-    })(window, document, videojs);
-	
-	for(var v in videojs.getPlayers()){
-		videojs.getPlayers()[v].simpleAnalytics();
-	}
+});
