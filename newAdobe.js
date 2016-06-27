@@ -273,7 +273,7 @@ videojs.plugin('pluginDev', function() {
             var isContentLoaded=false;
             var videoDuration;
             var mediaName;
-            var mediaPlayerName = "Brightcove New Player - Milestone";
+            var mediaPlayerName = "Playlist Player";
             var currentTime;
             var isPlaying = false;
           
