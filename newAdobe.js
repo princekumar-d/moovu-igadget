@@ -15,7 +15,7 @@ videojs.plugin('milestone', function() {
                     //console.log("IN ABDMediaOPEN content loaded");
                     //Get all required metadata
                     currentTime = myPlayer.currentTime();
-                    mediaName = myPlayer.mediainfo.description;
+                    mediaName = myPlayer.mediainfo.name;
                     videoDuration = myPlayer.mediainfo.duration;
                     //Open adobe Analytics Media Module
                     s.Media.open(mediaName,videoDuration,mediaPlayerName);
@@ -39,7 +39,7 @@ videojs.plugin('milestone', function() {
             myPlayer.on('loadstart',function(){
                 //console.log("loadstart - " + myPlayer.mediainfo.description);
                 //Check that metadata is loaded
-                if(myPlayer.mediainfo.description){
+                if(myPlayer.mediainfo.name){
                     isContentLoaded = true;
                     //Initiate Adobe Analytics Media Module tracking.
                     ABDMediaOPEN();
